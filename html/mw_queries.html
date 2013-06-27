@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Predefined Queries &mdash; WMQL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="WMQL 0.1 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="np-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="index.html">WMQL</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/mw_queries.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="predefined-queries">
+<span id="id1"></span><h1>Predefined Queries<a class="headerlink" href="#predefined-queries" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Association Tracts</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><div class="first last highlight-wmql"><div class="highlight"><pre><span class="n">CB</span><span class="o">.</span><span class="n">side</span> <span class="o">=</span> <span class="n">only</span><span class="p">(</span>
+   <span class="p">(</span><span class="n">cingular</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">cingular_cortex</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
+   <span class="n">middle_frontal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">cuneus</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">entorhinal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span>
+   <span class="n">superior_frontal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">inferior_parietal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span>
+   <span class="n">fusiform</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">medial_orbitofrontal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">lateral_orbitofrontal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">parahippocampal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">precuneus</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">lingual</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">centrum_semiovale</span><span class="o">.</span><span class="n">side</span><span class="p">))</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last highlight-wmql"><div class="highlight"><pre><span class="n">EmC</span><span class="o">.</span><span class="n">side</span> <span class="o">=</span>  <span class="p">(</span>
+    <span class="kp">endpoints_in</span> <span class="p">(</span><span class="n">inferior_frontal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">middle_frontal</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">and</span>
+    <span class="kp">endpoints_in</span> <span class="p">(</span><span class="n">inferior_parietal_lobule</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">and</span>
+    <span class="n">temporal</span><span class="o">.</span><span class="n">side</span> <span class="ow">and</span> <span class="n">insula</span><span class="o">.</span><span class="n">side</span><span class="p">)</span>
+    <span class="ow">not</span> <span class="ow">in</span> <span class="n">hemisphere</span><span class="o">.</span><span class="n">opposite</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-wmql"><div class="highlight"><pre><span class="n">SLF_I</span><span class="o">.</span><span class="n">side</span> <span class="o">=</span>
+    <span class="p">(</span><span class="n">superior_parietal</span><span class="o">.</span><span class="n">side</span> <span class="ow">and</span> <span class="n">precuneus</span><span class="o">.</span><span class="n">side</span> <span class="ow">and</span> <span class="n">superior_frontal</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">or</span>
+    <span class="p">(</span><span class="n">superior_parietal</span><span class="o">.</span><span class="n">side</span> <span class="ow">and</span> <span class="n">precuneus</span><span class="o">.</span><span class="n">side</span> <span class="ow">and</span> <span class="n">superior_frontal</span><span class="o">.</span><span class="n">side</span> <span class="ow">and</span> <span class="n">lateral_occipital</span><span class="o">.</span><span class="n">side</span><span class="p">)</span>
+    <span class="ow">not</span> <span class="ow">in</span> <span class="n">cingular</span><span class="o">.</span><span class="n">side</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">temporal</span><span class="o">.</span><span class="n">side</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">subcortical</span><span class="o">.</span><span class="n">side</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">hemisphere</span><span class="o">.</span><span class="n">opposite</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last highlight-wmql"><div class="highlight"><pre><span class="n">SLF_II</span><span class="o">.</span><span class="n">side</span> <span class="o">=</span>
+        <span class="p">(</span><span class="n">inferior_parietal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">supramarginal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">lateral_occipital</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">and</span> <span class="kp">endpoints_in</span> <span class="p">(</span><span class="n">middle_frontal</span><span class="o">.</span><span class="n">side</span><span class="p">))</span>
+        <span class="ow">not</span> <span class="ow">in</span> <span class="n">temporal</span><span class="o">.</span><span class="n">side</span>
+        <span class="ow">not</span> <span class="ow">in</span> <span class="n">subcortical</span><span class="o">.</span><span class="n">side</span>
+        <span class="ow">not</span> <span class="ow">in</span> <span class="n">hemisphere</span><span class="o">.</span><span class="n">opposite</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-wmql"><div class="highlight"><pre><span class="n">SLF_III</span><span class="o">.</span><span class="n">side</span> <span class="o">=</span>
+    <span class="p">((</span><span class="n">inferior_parietal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">supramarginal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">lateral_occipital</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">and</span> <span class="kp">endpoints_in</span> <span class="p">(</span><span class="n">inferior_frontal</span><span class="o">.</span><span class="n">side</span><span class="p">))</span>
+    <span class="ow">not</span> <span class="ow">in</span> <span class="n">temporal</span><span class="o">.</span><span class="n">side</span>
+    <span class="ow">not</span> <span class="ow">in</span> <span class="n">subcortical</span><span class="o">.</span><span class="n">side</span>
+    <span class="ow">not</span> <span class="ow">in</span> <span class="n">hemisphere</span><span class="o">.</span><span class="n">opposite</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last highlight-wmql"><div class="highlight"><pre><span class="n">AF</span><span class="o">.</span><span class="n">side</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="kp">endpoints_in</span><span class="p">(</span><span class="n">frontal</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">and</span> <span class="kp">endpoints_in</span><span class="p">(</span><span class="n">temporal</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">and</span>
+    <span class="p">(</span><span class="n">inferior_frontal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span>
+    <span class="n">middle_frontal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">precentral</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">and</span>
+    <span class="n">only</span><span class="p">(</span><span class="n">temporal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">parietal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">frontal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">centrum_semiovale</span><span class="o">.</span><span class="n">side</span><span class="p">)</span>
+    <span class="ow">not</span> <span class="ow">in</span> <span class="n">medial_of</span> <span class="p">(</span><span class="n">supramarginal</span><span class="o">.</span><span class="n">side</span><span class="p">))</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-wmql"><div class="highlight"><pre><span class="n">IOFF</span><span class="o">.</span><span class="n">side</span> <span class="o">=</span> <span class="p">(</span><span class="n">lateralorbitofrontal</span><span class="o">.</span><span class="n">side</span> <span class="ow">and</span> <span class="n">occipital</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">and</span>
+    <span class="n">temporal</span><span class="o">.</span><span class="n">side</span>
+    <span class="ow">not</span> <span class="ow">in</span> <span class="n">superior_parietal_lobule</span><span class="o">.</span><span class="n">side</span>
+    <span class="ow">not</span> <span class="ow">in</span> <span class="n">hemisphere</span><span class="o">.</span><span class="n">opposite</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last highlight-wmql"><div class="highlight"><pre><span class="n">ILF</span><span class="o">.</span><span class="n">side</span> <span class="o">=</span> <span class="n">only</span><span class="p">(</span><span class="n">temporal</span><span class="o">.</span><span class="n">side</span> <span class="ow">and</span> <span class="n">occipital</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">and</span>
+    <span class="kp">anterior_of</span> <span class="p">(</span><span class="n">hippocampus</span><span class="o">.</span><span class="n">side</span><span class="p">)</span>
+    <span class="ow">not</span> <span class="ow">in</span> <span class="n">parahippocampal</span><span class="o">.</span><span class="n">side</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-wmql"><div class="highlight"><pre><span class="n">MdLF</span><span class="o">.</span><span class="n">side</span> <span class="o">=</span> <span class="n">only</span><span class="p">(</span>
+    <span class="p">(</span><span class="n">temporal_pole</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">superior_temporal</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">and</span>
+    <span class="p">(</span><span class="n">inferior_parietal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span>
+    <span class="n">superior_parietal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span>
+    <span class="n">supramarginal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span>
+    <span class="n">precuneus</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span>
+    <span class="p">(</span><span class="n">centrum_semiovale</span><span class="o">.</span><span class="n">side</span> <span class="ow">and</span> <span class="n">superior_parietal</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">or</span>
+    <span class="p">(</span><span class="n">centrum_semiovale</span><span class="o">.</span><span class="n">side</span> <span class="ow">and</span> <span class="n">inferior_parietal</span><span class="o">.</span><span class="n">side</span><span class="p">))</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="first last highlight-wmql"><div class="highlight"><pre><span class="n">UF</span><span class="o">.</span><span class="n">side</span> <span class="o">=</span> <span class="n">insula</span><span class="o">.</span><span class="n">side</span> <span class="ow">and</span>
+    <span class="p">(</span><span class="n">inferior_frontal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">middle_frontal</span><span class="o">.</span><span class="n">side</span> <span class="ow">or</span> <span class="n">orbito_frontal</span><span class="o">.</span><span class="n">side</span><span class="p">)</span> <span class="ow">and</span>
+    <span class="kp">endpoints_in</span> <span class="p">(</span><span class="n">temporal</span><span class="o">.</span><span class="n">side</span> <span class="ow">and</span> <span class="kp">anterior_of</span> <span class="p">(</span><span class="n">amygdala</span><span class="o">.</span><span class="n">side</span><span class="p">))</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="np-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="index.html">WMQL</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Demian Wassermann (Modified BSD License).
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>

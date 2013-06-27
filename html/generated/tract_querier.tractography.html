@@ -99,13 +99,18 @@
 </tbody>
 </table>
 <span class="target" id="module-tract_querier.tractography"></span><dl class="function">
-<dt id="tract_querier.tractography.tractography_from_vtk_files">
-<tt class="descclassname">tract_querier.tractography.</tt><tt class="descname">tractography_from_vtk_files</tt><big>(</big><em>vtk_file_names</em><big>)</big><a class="reference internal" href="../_modules/tract_querier/tractography.html#tractography_from_vtk_files"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tract_querier.tractography.tractography_from_vtk_files" title="Permalink to this definition">¶</a></dt>
+<dt id="tract_querier.tractography.tractography_from_files">
+<tt class="descclassname">tract_querier.tractography.</tt><tt class="descname">tractography_from_files</tt><big>(</big><em>filenames</em><big>)</big><a class="headerlink" href="#tract_querier.tractography.tractography_from_files" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="tract_querier.tractography.tractography_to_vtk_file">
-<tt class="descclassname">tract_querier.tractography.</tt><tt class="descname">tractography_to_vtk_file</tt><big>(</big><em>vtk_file_name</em>, <em>tractography</em><big>)</big><a class="reference internal" href="../_modules/tract_querier/tractography.html#tractography_to_vtk_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tract_querier.tractography.tractography_to_vtk_file" title="Permalink to this definition">¶</a></dt>
+<dt id="tract_querier.tractography.tractography_from_file">
+<tt class="descclassname">tract_querier.tractography.</tt><tt class="descname">tractography_from_file</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#tract_querier.tractography.tractography_from_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tract_querier.tractography.tractography_to_file">
+<tt class="descclassname">tract_querier.tractography.</tt><tt class="descname">tractography_to_file</tt><big>(</big><em>filename</em>, <em>tractography</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#tract_querier.tractography.tractography_to_file" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -396,6 +401,62 @@ number of components of that data type.</p>
 </dd></dl>
 
 </dd></dl>
+
+<dl class="function">
+<dt id="tract_querier.tractography.tractography_from_trackvis_file">
+<tt class="descclassname">tract_querier.tractography.</tt><tt class="descname">tractography_from_trackvis_file</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#tract_querier.tractography.tractography_from_trackvis_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tract_querier.tractography.tractography_to_trackvis_file">
+<tt class="descclassname">tract_querier.tractography.</tt><tt class="descname">tractography_to_trackvis_file</tt><big>(</big><em>filename</em>, <em>tractography</em>, <em>affine=None</em>, <em>image_dimensions=None</em><big>)</big><a class="headerlink" href="#tract_querier.tractography.tractography_to_trackvis_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tract_querier.tractography.tractography_from_vtk_files">
+<tt class="descclassname">tract_querier.tractography.</tt><tt class="descname">tractography_from_vtk_files</tt><big>(</big><em>vtk_file_names</em><big>)</big><a class="reference internal" href="../_modules/tract_querier/tractography.html#tractography_from_vtk_files"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tract_querier.tractography.tractography_from_vtk_files" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tract_querier.tractography.tractography_to_vtk_file">
+<tt class="descclassname">tract_querier.tractography.</tt><tt class="descname">tractography_to_vtk_file</tt><big>(</big><em>vtk_file_name</em>, <em>tractography</em><big>)</big><a class="reference internal" href="../_modules/tract_querier/tractography.html#tractography_to_vtk_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tract_querier.tractography.tractography_to_vtk_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tract_querier.tractography.vtkPolyData_to_tracts">
+<tt class="descclassname">tract_querier.tractography.</tt><tt class="descname">vtkPolyData_to_tracts</tt><big>(</big><em>polydata</em>, <em>return_tractography_object=True</em><big>)</big><a class="headerlink" href="#tract_querier.tractography.vtkPolyData_to_tracts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a VTKPolyData object and outputs a tracts/tracts_data pair</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>polydata</strong> : vtkPolyData</p>
+<blockquote>
+<div><p>VTKPolyData Object</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>tracts</strong> : list of float array N_ix3</p>
+<blockquote>
+<div><p>Each element of the list is a tract represented as point array,
+the length of the i-th tract is N_i</p>
+</div></blockquote>
+<p><strong>tract_data</strong> : dict of &lt;data name&gt;= list of float array of N_ixM</p>
+<blockquote class="last">
+<div><p>Each element in the list corresponds to a tract,
+N_i is the length of the i-th tract and M is the
+number of components of that data type.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tract_querier.tractography.tracts_to_vtkPolyData">
+<tt class="descclassname">tract_querier.tractography.</tt><tt class="descname">tracts_to_vtkPolyData</tt><big>(</big><em>tracts</em>, <em>tracts_data={}</em>, <em>lines_indices=None</em><big>)</big><a class="headerlink" href="#tract_querier.tractography.tracts_to_vtkPolyData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </div>
 
