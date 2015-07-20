@@ -1,0 +1,17 @@
+#Import the freesurfer label definitions from the Desikan atlas (Desikan et al 2006)
+import FreeSurfer.qry
+
+all_forcepsminor = endpoints_in(frontalpole.left) and endpoints_in(frontalpole.right)
+
+# forceps.left |= (
+# 			frontalpole.left or
+# 			medialorbitofrontal.left
+# )
+#
+# forceps.right |= (
+# 			frontalpole.right or
+# 			medialorbitofrontal.right
+# )
+#
+# #Define all the commissural tracts
+# all_forcepsminor = endpoints_in(forceps.left) and endpoints_in(forceps.right)
